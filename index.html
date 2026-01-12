@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concurso de Rifa: ¡Gana una Motocicleta Nueva!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px 0;
+            width: 80%;
+            max-width: 300px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>¡Participa en la Rifa de una Motocicleta Nueva!</h1>
+    </header>
+    <div class="container">
+        <p>Bienvenido al concurso. Por solo [precio del boleto], podrías ganar una motocicleta [modelo, por ejemplo: Honda CB125F] completamente nueva. ¡No te lo pierdas!</p>
+        
+        <!-- Agrega una imagen de la moto (reemplaza la URL con una real) -->
+        <img src="https://ejemplo.com/imagen-moto.jpg" alt="Motocicleta Nueva">
+        
+        <h2>Reglas del Concurso:</h2>
+        <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
+            <li>Fecha de inicio: [fecha]</li>
+            <li>Fecha de sorteo: [fecha]</li>
+            <li>Cómo participar: Compra un boleto enviando tu información abajo.</li>
+            <li>Premio: Una motocicleta nueva valorada en [valor].</li>
+        </ul>
+        
+        <h2>Inscríbete Aquí:</h2>
+        <form id="inscripcionForm">
+            <input type="text" placeholder="Tu Nombre" required>
+            <input type="email" placeholder="Tu Email" required>
+            <input type="tel" placeholder="Tu Teléfono" required>
+            <button type="submit">¡Comprar Boleto!</button>
+        </form>
+        
+        <p id="mensaje" style="color: green; margin-top: 10px;"></p>
+    </div>
+
+    <script>
+        document.getElementById('inscripcionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('mensaje').textContent = '¡Gracias por inscribirte! Te contactaremos pronto.';
+            // Aquí podrías agregar código para enviar los datos a un email o base de datos, pero por ahora es solo un mensaje.
+        });
+    </script>
+</body>
+</html>
